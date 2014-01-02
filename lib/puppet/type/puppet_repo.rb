@@ -3,6 +3,7 @@ require 'uri'
 
 Puppet::Type.newtype(:puppet_repo) do
   ensurable
+  defaultto :present
 
   newparam(:id) do
     desc 'The repo id'

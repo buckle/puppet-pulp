@@ -3,6 +3,7 @@ require 'uri'
 
 Puppet::Type.newtype(:pulp_consumer) do
   ensurable
+  defaultto :present
 
   newparam(:id) do
     desc 'The consumer id to register'
