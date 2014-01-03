@@ -1,6 +1,7 @@
-require "#{File.dirname(__FILE__)}/../../../puppet-pulp/pulp_admin"
-
 Puppet::Type::type(:pulp_binding).provide(:rpm) do
+  # Only activate this provider if runcible is installed
+  confine :feature => :runcible
+
   def create
     pulp_admin.bind @resource[:id]
   end
