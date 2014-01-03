@@ -1,1 +1,1 @@
-Puppet.features.add(:runcible, :libs => ['runcible'])
+Puppet.features.add(:runcible, :libs => ['rubygems','runcible'])
